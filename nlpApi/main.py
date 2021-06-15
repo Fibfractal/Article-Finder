@@ -4,6 +4,7 @@ import time
 from matcher import match_rank_articles, match_rank_articles2
 from summary import preprocessing_article, get_summary
 from pdf_to_string import pdf_to_string_process
+import os
 
 # instantiate the app object
 app = Sanic("app") # __name__
@@ -53,4 +54,4 @@ async def articlePost(req):
 
 # start the server
 if __name__ == "__main__":
-  app.run(port=5000)
+  app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
