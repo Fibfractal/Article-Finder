@@ -52,6 +52,15 @@ async def articlePost(req):
     return res.json(article)
 
 
+# enable frontend to be served from root
+# app.static('/', './frontend/dist')
+app.static('/', './frontend/Article Finder/dist')
+
+
+@app.exception(NotFound)
+async def ignore_404s(request, exception):
+    return await res.file('./frontend/Article Finder/dist/index.html')
+
 # start the server
 if __name__ == "__main__":
   app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
