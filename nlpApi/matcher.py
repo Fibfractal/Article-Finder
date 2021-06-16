@@ -1,7 +1,8 @@
 import spacy
 from spacy.matcher import PhraseMatcher
 
-nlp = spacy.load('en_core_web_lg')  # run this when matching
+nlp = spacy.load('en_core_web_md')  
+# nlp = spacy.load('en_core_web_lg')  # run this when matching
 # nlp = spacy.load("en_core_web_trf")
 
 

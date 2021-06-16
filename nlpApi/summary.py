@@ -2,7 +2,8 @@ import spacy
 from collections import Counter
 from heapq import nlargest
 
-nlp = spacy.load('en_core_web_lg')
+nlp = spacy.load('en_core_web_md')  
+# nlp = spacy.load('en_core_web_lg')
 # nlp = spacy.load('en_core_web_trf')  
 
 def preprocessing_article(article):
